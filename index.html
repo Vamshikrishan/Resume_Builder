@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">Interactive Resume Builder</header>
+
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <div class="container">
+      <!-- FORM -->
+      <aside class="card form-card">
+        <h2>Build Your Resume</h2>
+        <form id="resumeForm" autocomplete="off">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" type="text" placeholder="Your full name" />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" />
+
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" placeholder="+91 9876543210" />
+
+          <label for="githubLink">GitHub Profile</label>
+          <input
+            id="githubLink"
+            type="url"
+            placeholder="https://github.com/yourusername"
+          />
+
+          <label for="codingLink">LeetCode / GFG Profile</label>
+          <input
+            id="codingLink"
+            type="url"
+            placeholder="https://leetcode.com/yourusername or gfg link"
+          />
+
+          <label for="linkedinLink">LinkedIn Profile</label>
+          <input
+            id="linkedinLink"
+            type="url"
+            placeholder="https://linkedin.com/in/yourusername"
+          />
+
+          <label for="summary">Profile Summary</label>
+          <textarea
+            id="summary"
+            placeholder="A short professional summary..."
+          ></textarea>
+
+          <h3>Skills</h3>
+          <div class="checkbox-group" id="skillsCheckboxGroup">
+            <label class="checkbox-item">
+              <input type="checkbox" value="HTML" /> HTML
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="CSS" /> CSS
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="JavaScript" /> JavaScript
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="React" /> React
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="Node.js" /> Node.js
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="Python" /> Python
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="Java" /> Java
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="SQL" /> SQL
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="Git" /> Git
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" value="AWS" /> AWS
+            </label>
+          </div>
+          <div class="tag-input-container" id="customSkillsContainer">
+            <input
+              type="text"
+              class="tag-input"
+              id="customSkillInput"
+              placeholder="Type custom skill and press Enter"
+            />
+          </div>
+
+          <h3>Education</h3>
+          <div id="educationList" class="list-container"></div>
+          <div class="row">
+            <button type="button" id="addEdu" class="btn ghost">
+              + Add Education
+            </button>
+          </div>
+
+          <h3>Experience</h3>
+          <div id="experienceList" class="list-container"></div>
+          <div class="row">
+            <button type="button" id="addExp" class="btn ghost">
+              + Add Experience
+            </button>
+          </div>
+
+          <h3>Projects</h3>
+          <div id="projectList" class="list-container"></div>
+          <div class="row">
+            <button type="button" id="addProj" class="btn ghost">
+              + Add Project
+            </button>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+            <button type="button" id="downloadBtn" class="btn">
+              Download PDF
+            </button>
+          </div>
+        </form>
+        <p class="hint">
+          Tip: Use the description fields for multi-line text (Enter works).
+        </p>
+      </aside>
+
+      <!-- PREVIEW -->
+      <main class="card preview-card">
+        <h2>Live Resume Preview</h2>
+        <div id="resumePreview" class="resume">
+          <header class="resume-header">
+            <h1 id="rName">Your Name</h1>
+            <p id="rContact" class="muted">Email | Phone | Links</p>
+          </header>
+
+          <section class="section resume-section">
+            <h3>Profile Summary</h3>
+            <p id="rSummary" class="summary">
+              Your profile summary will appear here.
+            </p>
+          </section>
+
+          <section class="section resume-section">
+            <h3>Skills</h3>
+            <div id="rSkills" class="chips"></div>
+          </section>
+
+          <section class="section resume-section">
+            <h3>Education</h3>
+            <div id="rEducation"></div>
+          </section>
+
+          <section class="section resume-section">
+            <h3>Experience</h3>
+            <div id="rExperience"></div>
+          </section>
+
+          <section class="section resume-section">
+            <h3>Projects</h3>
+            <div id="rProjects"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
