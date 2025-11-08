@@ -98,8 +98,11 @@ and provides a **match score** out of 10 with suggestions for improving your ATS
 
 **Vamshi Krishna**
 🎓 Internship Final Project — VaultofCodes
+
 💼 Role: Web Development Intern
+
 📧 Email: [[vamship250106@gmail.com](vamship250106@gmail.com)]
+
 🌐 Portfolio: [[your-portfolio-link](https://vamshikrishan.github.io/portfolio/)]
 
 ---
